@@ -13,6 +13,7 @@
     "lint": "eslint ./src --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.9",
     "axios": "^0.27.2",
     "axios-mock-adapter": "^1.21.2",
     "element-plus": "2.1.7",

@@ -1,5 +1,10 @@
 <template>
-  <p>这是文件{{ props.name }}</p>
+  <div class="g-box g-dv-file-box">
+    <el-icon class="u-icon">
+      <document />
+    </el-icon>
+    <p>{{ props.name }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +18,14 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <style lang="scss" scoped>
+.g-dv-file-box {
+  display: flex;
+  align-items: center;
+
+  .u-icon {
+    margin-right: 5px;
+  }
+}
 </style>
 
 <style lang="scss">

@@ -1,13 +1,42 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-
-  function increment () {
-    count.value++
+export const useCounterStore = defineStore('file-tree', {
+  state: () => {
+    return [{
+      name: 'api',
+      type: 'folder',
+      node: [{
+        name: 'ajax',
+        type: 'folder',
+        node: [{
+          name: 'err-code.ts',
+          type: 'file'
+        }, {
+          name: 'index.ts',
+          type: 'file'
+        }]
+      }, {
+        name: 'mock.ts',
+        type: 'file'
+      }]
+    }, {
+      name: 'assets',
+      type: 'folder',
+      node: []
+    }, {
+      name: 'components',
+      type: 'folder',
+      node: []
+    }, {
+      name: 'config',
+      type: 'folder',
+      node: []
+    }, {
+      name: 'main.ts',
+      type: 'file',
+      node: []
+    }]
+  },
+  actions: {
   }
-
-  return { count, doubleCount, increment }
 })
