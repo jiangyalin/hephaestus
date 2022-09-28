@@ -22,7 +22,39 @@ export interface resourceNode {
   node: Array<resourceNode>
 }
 
+// 文件树
 export interface fileTree {
   checked: number,
   resourceTree: Array<resourceNode>
+}
+
+// 标签枚举
+export enum tag {
+  FILE_TREE = 'file-tree-box',
+  DIV = 'div'
+}
+
+export interface layoutBlock {
+  tag: tag,
+  width: number,
+  height: number
+}
+
+export interface window {
+  width: number,
+  height: number
+}
+
+export enum locationType {
+  TL = 'tl',
+  TR = 'tr',
+  BT = 'bt'
+}
+
+// 布局
+export interface layout {
+  tlBlock: layoutBlock,
+  trBlock: layoutBlock,
+  btBlock: layoutBlock
+  window: window
 }

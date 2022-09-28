@@ -27,7 +27,7 @@ module.exports = {
     // TYPE_A
     // 要求组件名称始终为多词
     'vue/multi-word-component-names': ['error', {
-      ignores: ['home', 'index']
+      ignores: ['home', 'index', 'layout']
     }],
     // 禁止使用箭头函数定义观察者
     'vue/no-arrow-functions-in-watch': 'error',

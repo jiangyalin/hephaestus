@@ -20,22 +20,22 @@
           :name="item.name"
         ></dv-file>
       </div>
-      <file-tree
+      <index
         v-if="item.node"
         :tree="item.node"
         :prop-path="item.propPath"
         :level="props.level + 1"
-      ></file-tree>
+      ></index>
     </li>
   </ul>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="dv-file-tree-node">
 import { computed } from 'vue'
 import DvFolder from './../../widgets/dv-folder/index.vue'
 import DvFile from './../../widgets/dv-file/index.vue'
 import { resourceType } from '../../stores/interface'
-import { useCounterStore } from '@/stores/counter'
+import { useCounterStore } from '../../stores/file-tree/counter'
 const state = useCounterStore()
 
 interface Props {
@@ -68,6 +68,9 @@ const rowStyle = computed(() => ({
 <style lang="scss" scoped>
 .m-list {
   //padding-left: 18px;
+  font-size: 14px;
+  color: #bababa;
+  line-height: 1.2;
   cursor: default;
 
   .u-li {
