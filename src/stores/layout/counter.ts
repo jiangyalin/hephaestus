@@ -12,18 +12,18 @@ export const useCounterStore = defineStore('layout', {
       atom[INIT_WINDOW](this, { width, height })
       atom[SET_LAYOUT](this, {
         location: locationType.TL,
-        width: this.window.width * 0.3,
-        height: this.window.height * 0.8
+        width: Math.round(this.window.width * 0.3),
+        height: Math.round(this.window.height * 0.8)
       })
       atom[SET_LAYOUT](this, {
         location: locationType.TR,
-        width: this.window.width * 0.7,
-        height: this.window.height * 0.8
+        width: Math.round(this.window.width * 0.7),
+        height: Math.round(this.window.height * 0.8)
       })
       atom[SET_LAYOUT](this, {
         location: locationType.BT,
         width: this.window.width,
-        height: this.window.height * 0.2
+        height: Math.round(this.window.height * 0.2)
       })
     },
     setLayout ({ location, tag, width, height }: { location: locationType, tag?: tag, width?: number, height?: number }) {

@@ -34,11 +34,18 @@ import layout from '../components/module/layout.vue'
 import { useCounterStore } from '../stores/layout/counter'
 const layoutState = useCounterStore()
 
-onMounted(() => {
+const init = () => {
   layoutState.initLayout({
     width: document.querySelector('body').offsetWidth,
     height: document.querySelector('body').offsetHeight
   })
+}
+
+onMounted(() => {
+  init()
+  window.onresize = () => {
+    init()
+  }
 })
 </script>
 
@@ -49,8 +56,6 @@ onMounted(() => {
   }
 
   .m-box {
-    border: 1px solid #bababa;
-    box-sizing: border-box;
   }
 }
 </style>

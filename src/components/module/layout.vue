@@ -35,6 +35,11 @@ const tagList = {
 </script>
 
 <style lang="scss" scoped>
+.g-layout-box {
+  overflow: auto;
+  border: 1px solid #bababa;
+  box-sizing: border-box;
+}
 </style>
 
 <style lang="scss">
