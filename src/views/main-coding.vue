@@ -1,11 +1,11 @@
 <template>
-  <file-tree :tree="fileList"></file-tree>
+  <file-tree :tree="state.resourceTree"></file-tree>
 </template>
 
 <script setup lang="ts">
 import FileTree from '../components/module/file-tree.vue'
 import { useCounterStore } from '@/stores/counter'
-const fileList = useCounterStore()
+const state = useCounterStore()
 </script>
 
 <style lang="scss" scoped>
