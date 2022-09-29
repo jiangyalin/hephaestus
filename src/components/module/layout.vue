@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { tag } from '../../stores/interface'
+import { tag } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
 interface Props {
   tag: tag,
@@ -18,7 +18,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tag: 'div',
+  tag: tag.DIV,
   width: 100,
   height: 100
 })

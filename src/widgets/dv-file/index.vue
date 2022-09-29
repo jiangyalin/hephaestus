@@ -20,6 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
 <style lang="scss" scoped>
 .g-dv-file-box {
   display: flex;
+  padding-left: 18px;
   align-items: center;
 
   .u-icon {

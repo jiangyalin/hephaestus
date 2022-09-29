@@ -9,11 +9,13 @@
       <div
         class="u-row"
         :style="rowStyle"
-        @click.stop="state.selectResource(item.id)"
+        @click.stop="store.selectResource(item.id)"
       >
         <dv-folder
           v-if="item.type === resourceType.FOLDER"
+          :id="item.id"
           :name="item.name"
+          :is-expand="item.isExpand"
         ></dv-folder>
         <dv-file
           v-if="item.type === resourceType.FILE"
@@ -21,10 +23,10 @@
         ></dv-file>
       </div>
       <index
-        v-if="item.node"
+        v-if="item.node && item.isExpand"
         :tree="item.node"
         :prop-path="item.propPath"
-        :level="props.level + 1"
+        :level="(props.level || 0) + 1"
       ></index>
     </li>
   </ul>
@@ -34,26 +36,27 @@
 import { computed } from 'vue'
 import DvFolder from './../../widgets/dv-folder/index.vue'
 import DvFile from './../../widgets/dv-file/index.vue'
-import { resourceType } from '../../stores/interface'
+import { resourceType } from '../../stores/interface/enum'
+import type { resourceNode } from '../../stores/interface'
 import { useCounterStore } from '../../stores/file-tree/counter'
-const state = useCounterStore()
+const store = useCounterStore()
 
 interface Props {
-  tree: object[],
+  tree: resourceNode[],
   propPath?: string,
   level?: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tree: () => [{ name: 'api', type: 'folder' }],
+  tree: () => [{ name: 'api', type: resourceType.FOLDER, id: -1, isExpand: false, node: [] }],
   propPath: '',
   level: 0
 })
 
-const list = computed(() => props.tree.map(item => ({
+const list = computed(() => props.tree.map((item: resourceNode) => ({
   ...item,
   propPath: props.propPath + '/' + item.name,
-  selected: item.id === state.checked
+  selected: item.id === store.checked
 })))
 
 const rowStyle = computed(() => ({

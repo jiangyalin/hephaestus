@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import atom from './atom'
-import { SELECT_RESOURCE } from '../atom-type'
+import { EXPAND_FOLDER, SELECT_RESOURCE } from '../atom-type'
 import state from './state'
 
 export const useCounterStore = defineStore('file-tree', {
@@ -8,6 +8,9 @@ export const useCounterStore = defineStore('file-tree', {
   actions: {
     selectResource (resourceId: number) { // 选中资源
       atom[SELECT_RESOURCE](this, { id: resourceId })
+    },
+    expandFolder (id: number) { // 展开文件夹
+      atom[EXPAND_FOLDER](this, id)
     }
   },
   getters: {

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import state from './state'
 import atom from './atom'
 import { INIT_WINDOW, SET_LAYOUT } from '../atom-type'
-import { locationType, tag } from '../interface'
+import { locationType, tag } from '../interface/enum'
 
 export const useCounterStore = defineStore('layout', {
   state,

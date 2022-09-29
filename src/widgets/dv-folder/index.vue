@@ -1,5 +1,12 @@
 <template>
   <div class="g-box g-dv-folder-box">
+    <el-icon
+      class="u-icon"
+      :data-expand="props.isExpand"
+      @click="store.expandFolder(props.id)"
+    >
+      <arrow-right />
+    </el-icon>
     <el-icon class="u-icon">
       <folder />
     </el-icon>
@@ -8,12 +15,19 @@
 </template>
 
 <script setup lang="ts">
+import { useCounterStore } from '../../stores/file-tree/counter'
+const store = useCounterStore()
+
 interface Props {
-  name: string | number
+  id: number,
+  name: string | number,
+  isExpand: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  name: '测试文件夹'
+  id: 0,
+  name: '测试文件夹',
+  isExpand: false
 })
 </script>
 
@@ -24,6 +38,10 @@ const props = withDefaults(defineProps<Props>(), {
 
   .u-icon {
     margin-right: 5px;
+
+    &[data-expand="true"] {
+      transform: rotate(90deg);
+    }
   }
 }
 </style>

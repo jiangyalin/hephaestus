@@ -1,0 +1,41 @@
+{
+  "numTotalTestSuites": 2,
+  "numPassedTestSuites": 2,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 1,
+  "numPassedTests": 0,
+  "numFailedTests": 1,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1664420799543,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "HelloWorld"
+          ],
+          "fullName": " HelloWorld renders properly",
+          "status": "failed",
+          "title": "renders properly",
+          "duration": 4,
+          "failureMessages": [
+            "document is not defined"
+          ],
+          "location": {
+            "line": 109,
+            "column": 20
+          }
+        }
+      ],
+      "startTime": 1664420802147,
+      "endTime": 1664420802151,
+      "status": "failed",
+      "message": "",
+      "name": "/Users/jiangyalin/WebstormProjects/github-personal/hephaestus/src/components/__tests__/HelloWorld.spec.ts"
+    }
+  ]
+}

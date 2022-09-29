@@ -1,4 +1,4 @@
-import { tag } from '../interface'
+import { tag } from '../interface/enum'
 import type { layout } from '../interface'
 
 export default (): layout => ({

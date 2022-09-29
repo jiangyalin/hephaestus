@@ -1,6 +1,6 @@
 import { INIT_WINDOW, SET_LAYOUT } from '../atom-type'
 import type { layout } from '../interface'
-import { locationType, tag } from '../interface'
+import { locationType, tag } from '../interface/enum'
 
 export default {
   // 初始化窗口数据
