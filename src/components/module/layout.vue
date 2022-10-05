@@ -11,6 +11,7 @@
 import { computed } from 'vue'
 import { tag } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
+import EditorBox from './editor-box.vue'
 interface Props {
   tag: tag,
   width: number,
@@ -30,6 +31,7 @@ const boxStyle = computed(() => ({
 
 const tagList = {
   'file-tree-box': FileTreeBox,
+  'editor-box': EditorBox,
   div: 'div'
 }
 </script>

@@ -8,7 +8,7 @@ export default (): layout => ({
     height: 100
   },
   trBlock: {
-    tag: tag.DIV,
+    tag: tag.EDITOR,
     width: 100,
     height: 100
   },

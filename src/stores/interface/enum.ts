@@ -17,6 +17,7 @@ export enum fileType {
 // 标签枚举
 export enum tag {
   FILE_TREE = 'file-tree-box',
+  EDITOR = 'editor-box',
   DIV = 'div'
 }
 
