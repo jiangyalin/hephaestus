@@ -1,8 +1,6 @@
 <template>
   <!--<file-tree-box></file-tree-box>-->
   <div class="g-box g-main-coding-box">
-    <h1>eeeEEEeee</h1>
-    <input v-use-double-click />
     <div class="u-tp">
       <div class="m-tl m-box">
         <layout
@@ -35,7 +33,7 @@ import { onMounted } from 'vue'
 import layout from '../components/module/layout.vue'
 import { vUseDoubleClick } from '../use'
 import { useCounterStore } from '../stores/layout/counter'
-import { globalClick } from '../utils/global-event'
+// import { globalClick } from '../utils/global-event'
 const layoutState = useCounterStore()
 
 const init = () => {
@@ -45,19 +43,19 @@ const init = () => {
   })
 }
 
-globalClick({
-  id: 1,
-  callback: () => {
-    console.log('id=', 1)
-  }
-})
-
-globalClick({
-  id: 2,
-  callback: () => {
-    console.log('id=', 2)
-  }
-})
+// globalClick({
+//   id: 1,
+//   callback: () => {
+//     console.log('id=', 1)
+//   }
+// })
+//
+// globalClick({
+//   id: 2,
+//   callback: () => {
+//     console.log('id=', 2)
+//   }
+// })
 
 // 标记，鼠标双击待实现
 

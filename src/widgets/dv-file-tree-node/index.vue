@@ -10,6 +10,7 @@
         class="u-row"
         :style="rowStyle"
         @click.stop="store.selectResource(item.id)"
+        @dblclick.stop="store.expandFolder(item.id)"
       >
         <dv-folder
           v-if="item.type === resourceType.FOLDER"
@@ -75,6 +76,7 @@ const rowStyle = computed(() => ({
   color: #bababa;
   line-height: 1.2;
   cursor: default;
+  user-select: none;
 
   .u-li {
     &[data-active="true"] > .u-row {
