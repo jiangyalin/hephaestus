@@ -31,7 +31,7 @@
 import { onMounted } from 'vue'
 // import FileTreeBox from '../components/module/file-tree-box.vue'
 import layout from '../components/module/layout.vue'
-import { vUseDoubleClick } from '../use'
+// import { vUseDoubleClick } from '../use'
 import { useCounterStore } from '../stores/layout/counter'
 // import { globalClick } from '../utils/global-event'
 const layoutState = useCounterStore()
@@ -42,6 +42,8 @@ const init = () => {
     height: (document.querySelector('body') || {}).offsetHeight || 0
   })
 }
+
+// ace_layer ace_cursor-layer ace_hidden-cursors
 
 // globalClick({
 //   id: 1,

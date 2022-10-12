@@ -10,7 +10,7 @@
         class="u-row"
         :style="rowStyle"
         @click.stop="store.selectResource(item.id)"
-        @dblclick.stop="store.expandFolder(item.id)"
+        @dblclick.stop="store.expandElement(item.id)"
       >
         <dv-folder
           v-if="item.type === resourceType.FOLDER"
@@ -63,9 +63,6 @@ const list = computed(() => props.tree.map((item: resourceNode) => ({
 const rowStyle = computed(() => ({
   paddingLeft: (props.level * 18) + 'px'
 }))
-
-// console.log('rowStyle', rowStyle)
-// console.log('props.level', props.level)
 
 </script>
 

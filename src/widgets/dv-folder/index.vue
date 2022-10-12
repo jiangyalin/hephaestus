@@ -3,7 +3,7 @@
     <el-icon
       class="u-icon"
       :data-expand="props.isExpand"
-      @click="store.expandFolder(props.id)"
+      @click="store.expandElement(props.id)"
     >
       <arrow-right />
     </el-icon>

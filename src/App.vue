@@ -1,11 +1,11 @@
 <template>
   <main-coding></main-coding>
-  <!--<file-tree></file-tree>-->
+  <!--<editor-box></editor-box>-->
 </template>
 
 <script setup lang="ts">
 import MainCoding from './views/main-coding.vue'
-// import FileTree from './components/module/file-tree.vue'
+// import editorBox from './components/module/editor-box.vue'
 </script>
 
 <style scoped lang="scss">

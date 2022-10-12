@@ -1,4 +1,5 @@
 // file-tree
+export const INIT_FILE = 'INIT_FILE' // 初始化文件树
 export const SELECT_RESOURCE = 'SELECT_RESOURCE' // 选中资源
 export const EXPAND_FOLDER = 'EXPAND_FOLDER' // 展开文件夹
 

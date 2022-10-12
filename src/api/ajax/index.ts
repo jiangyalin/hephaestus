@@ -31,7 +31,7 @@ const ajax: RequestFunc = (
           // 当token失效时，清除所有请求防止重复弹起窗口
           return false
         }
-        if (code !== 0) {
+        if (code !== 200) {
           // 业务异常
           if (showErrMsg) {
             if (errCode.checkRecharge.includes(code)) {

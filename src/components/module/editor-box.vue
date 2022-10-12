@@ -1,62 +1,55 @@
 <template>
   <div class="g-box g-editor-box">
-    11
-    <!--<codemirror-->
-    <!--  v-model="code"-->
-    <!--  placeholder="Code goes here..."-->
-    <!--  :style="style"-->
-    <!--  :autofocus="true"-->
-    <!--  :indent-with-tab="true"-->
-    <!--  :tab-size="2"-->
-    <!--  :extensions="extensions"-->
-    <!--  @ready="handleReady"-->
-    <!--/>-->
     <v-ace-editor
-      v-model:value="json"
-      lang="json"
+      v-model:value="content.code"
+      lang="javascript"
+      theme="monokai"
       :options="{
-        useWorker: true
+        useWorker: true,
+        tooltipFollowsMouse: true
       }"
       :style="style"
+      @init="editorInit"
     />
   </div>
 </template>
 
 <script setup lang="ts">
+import { reactive, watchEffect } from 'vue'
 import { VAceEditor } from 'vue3-ace-editor'
-import 'ace-builds/src-noconflict/mode-json'
-import 'ace-builds/src-noconflict/theme-chrome'
-// import { ref, shallowRef } from 'vue'
-// import { Codemirror } from 'vue-codemirror'
-// import { javascript } from '@codemirror/lang-javascript'
-// import { oneDark } from '@codemirror/theme-one-dark'
-//
-// const code = ref('console.log(\'Hello, world!\')')
-// const extensions = [javascript(), oneDark]
-//
-// // Codemirror EditorView instance ref
-// const view = shallowRef()
-// const handleReady = (payload) => {
-//   view.value = payload.view
-// }
+import './ace-config'
+import api from './../../api'
+import bus from '../../tool/bus'
+import { ResultData } from '../../api/interface'
 
-const json = `{
-  a: 'a'
-}`
+const content = reactive({
+  code: ''
+})
 
-const style = { height: '400px' }
+watchEffect(async () => {
+  content.code = (await import('./ace-config.js?raw')).default
+})
 
-// Status is available at all times via Codemirror EditorView
-// const getCodemirrorStates = () => {
-//   const state = view.value.state
-//   const ranges = state.selection.ranges
-//   const selected = ranges.reduce((r, range) => r + range.to - range.from, 0)
-//   const cursor = ranges[0].anchor
-//   const length = state.doc.length
-//   const lines = state.doc.lines
-//   // more state info ...
-//   // return ...
-// }
+const editorInit = () => {
+  // import('brace/ext/language_tools') // language extension prerequsite...
+  // import('brace/mode/html')
+  // import('brace/mode/javascript') // language
+  // import('brace/mode/less')
+  // import('brace/theme/chrome')
+  // import('brace/snippets/javascript') // snippet
+}
+
+const style = { height: '850px' }
+
+bus.on('open-file', (id: number) => {
+  api.mock.getFileData({
+    path: {
+      id
+    }
+  }).then(async (res: ResultData) => {
+    content.code = (await import(res.data.asset + '?raw')).default
+  })
+})
 </script>
 
 <style lang="scss" scoped>

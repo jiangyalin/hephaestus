@@ -9,7 +9,7 @@ describe('file-tree', () => {
   })
   it('展开文件夹', () => {
     const counter = useCounterStore()
-    counter.expandFolder(2)
+    counter.expandElement(2)
     const treeMap: {
       [index: number]: resourceNode
     } = {}
