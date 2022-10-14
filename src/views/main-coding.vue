@@ -1,9 +1,15 @@
 <template>
   <!--<file-tree-box></file-tree-box>-->
-  <div class="g-box g-main-coding-box">
+  <div
+    v-if="windowInitFinish"
+    class="g-box g-main-coding-box"
+    @mousemove="mousemove"
+    @mouseup="mouseup"
+  >
     <div class="u-tp">
       <div class="m-tl m-box">
         <layout
+          :name="locationType.TL"
           :tag="layoutState.tlBlock.tag"
           :width="layoutState.tlBlock.width"
           :height="layoutState.tlBlock.height"
@@ -11,6 +17,7 @@
       </div>
       <div class="m-tr m-box">
         <layout
+          :name="locationType.TR"
           :tag="layoutState.trBlock.tag"
           :width="layoutState.trBlock.width"
           :height="layoutState.trBlock.height"
@@ -19,6 +26,7 @@
     </div>
     <div class="m-bt m-box">
       <layout
+        :name="locationType.BT"
         :tag="layoutState.btBlock.tag"
         :width="layoutState.btBlock.width"
         :height="layoutState.btBlock.height"
@@ -28,14 +36,13 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-// import FileTreeBox from '../components/module/file-tree-box.vue'
+import { onMounted, ref } from 'vue'
 import layout from '../components/module/layout.vue'
-// import { vUseDoubleClick } from '../use'
+import { locationType } from '../stores/interface/enum'
 import { useCounterStore } from '../stores/layout/counter'
-// import { globalClick } from '../utils/global-event'
 const layoutState = useCounterStore()
 
+const windowInitFinish = ref(false) // 窗口初始化完成
 const init = () => {
   layoutState.initLayout({
     width: (document.querySelector('body') || {}).offsetWidth || 0,
@@ -43,30 +50,21 @@ const init = () => {
   })
 }
 
-// ace_layer ace_cursor-layer ace_hidden-cursors
-
-// globalClick({
-//   id: 1,
-//   callback: () => {
-//     console.log('id=', 1)
-//   }
-// })
-//
-// globalClick({
-//   id: 2,
-//   callback: () => {
-//     console.log('id=', 2)
-//   }
-// })
-
-// 标记，鼠标双击待实现
-
 onMounted(() => {
   init()
+  windowInitFinish.value = true
   window.onresize = () => {
     init()
   }
 })
+
+const mousemove = (e: any) => {
+  layoutState.dragBorder({ x: e.pageX, y: e.pageY })
+}
+
+const mouseup = () => {
+  layoutState.mack({ block: '', direction: '' })
+}
 </script>
 
 <style lang="scss" scoped>

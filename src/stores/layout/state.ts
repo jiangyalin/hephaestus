@@ -20,5 +20,9 @@ export default (): layout => ({
   window: {
     width: 100,
     height: 100
+  },
+  dragMack: { // 拖拽中标记
+    block: '',
+    direction: ''
   }
 })

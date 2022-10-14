@@ -1,6 +1,6 @@
-import { INIT_WINDOW, SET_LAYOUT } from '../atom-type'
+import { INIT_WINDOW, MACK_LAYOUT_OBJ, SET_LAYOUT } from '../atom-type'
 import type { layout } from '../interface'
-import { locationType, tag } from '../interface/enum'
+import { directionType, locationType, tag } from '../interface/enum'
 
 export default {
   // 初始化窗口数据
@@ -25,5 +25,10 @@ export default {
       state.btBlock.width = width || state.btBlock.width
       state.btBlock.height = height || state.btBlock.height
     }
+  },
+  // 标记操作对象
+  [MACK_LAYOUT_OBJ] (state: layout, { block, direction }: { block: locationType, direction: directionType }) {
+    state.dragMack.block = block
+    state.dragMack.direction = direction
   }
 }

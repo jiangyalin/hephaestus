@@ -1,4 +1,4 @@
-import type { resourceType, fileType, tag } from './enum'
+import type { resourceType, fileType, tag, locationType, directionType } from './enum'
 
 export interface resourceNode {
   id: number,
@@ -31,5 +31,9 @@ export interface layout {
   tlBlock: layoutBlock,
   trBlock: layoutBlock,
   btBlock: layoutBlock
-  window: window
+  window: window,
+  dragMack: {
+    block: locationType | '',
+    direction: directionType | ''
+  }
 }

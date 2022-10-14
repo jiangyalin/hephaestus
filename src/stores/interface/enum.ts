@@ -26,3 +26,11 @@ export enum locationType {
   TR = 'tr',
   BT = 'bt'
 }
+
+// 方向类型
+export enum directionType {
+  TP = 'tp',
+  BT = 'bt',
+  FL = 'fl',
+  Fr = 'fr'
+}

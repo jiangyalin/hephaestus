@@ -39,6 +39,4 @@ default:
   config.serverApi = 'https://mk-api.now-see.cn'
 }
 
-console.log('envType', envType)
-
 export default config
