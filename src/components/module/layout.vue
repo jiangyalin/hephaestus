@@ -36,6 +36,7 @@ import { ref, computed, onMounted } from 'vue'
 import { directionType, locationType, tag } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
 import EditorBox from './editor-box.vue'
+import TerminalBox from './terminal-box.vue'
 import tool from './../../tool/index.ts'
 import { useCounterStore } from '../../stores/layout/counter'
 const layoutState = useCounterStore()
@@ -62,7 +63,8 @@ const boxStyle = computed(() => ({
 const tagList = {
   'file-tree-box': FileTreeBox,
   'editor-box': EditorBox,
-  div: 'div'
+  div: 'div',
+  'terminal-box': TerminalBox
 }
 
 // 边框是否为可拖拽状态

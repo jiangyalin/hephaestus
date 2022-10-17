@@ -39,7 +39,11 @@
 import { onMounted, ref } from 'vue'
 import layout from '../components/module/layout.vue'
 import { locationType } from '../stores/interface/enum'
+import { io } from 'socket.io-client'
+import config from '../config'
+
 import { useCounterStore } from '../stores/layout/counter'
+
 const layoutState = useCounterStore()
 
 const windowInitFinish = ref(false) // 窗口初始化完成
@@ -65,6 +69,20 @@ const mousemove = (e: any) => {
 const mouseup = () => {
   layoutState.mack({ block: '', direction: '' })
 }
+
+const webSocket = () => {
+  const socket = io(config.serverWs)
+
+  socket.on('connect', () => {
+    console.log(socket.connected) // true
+  })
+
+  socket.on('disconnect', () => {
+    console.log(socket.connected) // false
+  })
+}
+
+webSocket()
 </script>
 
 <style lang="scss" scoped>

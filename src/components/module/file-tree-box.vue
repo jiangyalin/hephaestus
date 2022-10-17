@@ -9,7 +9,7 @@ import api from './../../api'
 import { ResultData } from '../../api/interface'
 const state = useCounterStore()
 
-api.mock.getFileTreeAll().then((res: ResultData) => {
+api.fileTree.getFileTreeAll().then((res: ResultData) => {
   state.initFileTree(res.data)
 })
 </script>

@@ -1,5 +1,6 @@
 import { EXPAND_FOLDER, INIT_FILE, SELECT_RESOURCE } from '../atom-type'
 import type { fileTree, resourceNode } from '../interface'
+import { resourceType } from '../interface/enum'
 
 export default {
   // 选中资源
@@ -22,14 +23,20 @@ export default {
   },
   // 初始化文件树
   [INIT_FILE] (state: fileTree, data: Array<resourceNode>) {
+    const map = {
+      [resourceType.FOLDER]: 100000,
+      [resourceType.FILE]: 0
+    }
     const mapTree = (tree: any) => {
-      return tree.map((item: any) => {
-        return {
-          ...item,
-          isExpand: false,
-          node: mapTree(item.node)
-        }
-      })
+      return tree
+        .sort((a: resourceNode, b: resourceNode) => (b.name.charCodeAt(0) + map[b.type]) - (a.name.charCodeAt(0) + map[a.type]))
+        .map((item: any) => {
+          return {
+            ...item,
+            isExpand: false,
+            node: mapTree(item.node)
+          }
+        })
     }
     state.resourceTree = mapTree(data)
   }

@@ -47,6 +47,7 @@ bus.on('open-file', (id: number) => {
       id
     }
   }).then(async (res: ResultData) => {
+    /* @vite-ignore */
     content.code = (await import(res.data.asset + '?raw')).default
   })
 })

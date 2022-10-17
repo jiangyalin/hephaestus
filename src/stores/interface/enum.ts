@@ -18,7 +18,8 @@ export enum fileType {
 export enum tag {
   FILE_TREE = 'file-tree-box',
   EDITOR = 'editor-box',
-  DIV = 'div'
+  DIV = 'div',
+  TERMINAL = 'terminal-box'
 }
 
 export enum locationType {

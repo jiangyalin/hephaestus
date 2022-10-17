@@ -1,4 +1,3 @@
-import { resourceType } from '../interface/enum'
 import type { fileTree } from '../interface'
 
 export default ():fileTree => ({

@@ -13,7 +13,7 @@ export default (): layout => ({
     height: 100
   },
   btBlock: {
-    tag: tag.DIV,
+    tag: tag.TERMINAL,
     width: 100,
     height: 100
   },

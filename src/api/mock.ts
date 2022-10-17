@@ -8,12 +8,12 @@ import mockData from './mock-data/index'
 const mock = new MockAdapter(Axios, { delayResponse: 1000 })
 
 mock
-  .onGet('/file-tree/all')
-  .reply(200, {
-    code: 200,
-    data: mockData.fileTree,
-    msg: ''
-  })
+  // .onGet('/file-tree/all')
+  // .reply(200, {
+  //   code: 200,
+  //   data: mockData.fileTree,
+  //   msg: ''
+  // })
   .onGet('/file-data/9')
   .reply(200, {
     code: 200,
@@ -39,15 +39,15 @@ export const getTalentList = (data: ResPage): any => {
   )
 }
 
-const getFileTreeAll = (): any => {
-  return ajax(
-    {
-      url: '/file-tree/all',
-      method: Method.GET
-    },
-    {}
-  )
-}
+// const getFileTreeAll = (): any => {
+//   return ajax(
+//     {
+//       url: '/api/file-tree/all',
+//       method: Method.GET
+//     },
+//     {}
+//   )
+// }
 
 const getFileData = (data: { path: { id: number } }): any => {
   return ajax(
@@ -60,6 +60,6 @@ const getFileData = (data: { path: { id: number } }): any => {
 }
 
 export default {
-  getFileTreeAll,
+  // getFileTreeAll,
   getFileData
 }
