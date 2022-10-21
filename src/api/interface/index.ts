@@ -1,3 +1,5 @@
+import type { Method } from './enum'
+
 export interface Result {
   code: string;
   msg: string;
@@ -12,11 +14,11 @@ export interface ResPage {
   pageSize: number;
 }
 
-export enum Method {
-  GET = 'get',
-  POST = 'post',
-  // DELETE = 'delete',
-  // UPDATE = 'update'
+export interface Parameter {
+  query?: any;
+  body?: any;
+  headers?: any;
+  [propName: string]: any;
 }
 
 export interface RequestFunc {
@@ -26,12 +28,7 @@ export interface RequestFunc {
       method: Method;
       baseUrl?: string;
     },
-    data: {
-      query?: any;
-      body?: any;
-      headers?: any;
-      [propName: string]: any;
-    },
+    data: Parameter,
     showErrMsg?: boolean
   ): any;
 }

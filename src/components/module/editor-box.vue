@@ -41,14 +41,12 @@ const editorInit = () => {
 
 const style = { height: '850px' }
 
-bus.on('open-file', (id: number) => {
-  api.mock.getFileData({
-    path: {
-      id
-    }
+bus.on('open-file', (path: string) => {
+  api.fileTree.getFileInfo({
+    path
   }).then(async (res: ResultData) => {
-    /* @vite-ignore */
-    content.code = (await import(res.data.asset + '?raw')).default
+    // content.code = (await import(res.data.asset + '?raw')).default
+    content.code = res.data.fileData
   })
 })
 </script>

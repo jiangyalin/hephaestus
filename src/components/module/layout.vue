@@ -3,7 +3,9 @@
     class="g-box g-layout-box"
     :style="boxStyle"
   >
-    <component :is="tagList[props.tag]" />
+    <div class="u-box">
+      <component :is="tagList[props.tag]" />
+    </div>
     <div
       ref="jTp"
       class="u-border s-tp"
@@ -97,6 +99,12 @@ const mousedown = (name: locationType, direction: directionType) => {
   position: relative;
   //border: 1px solid #bababa;
   box-sizing: border-box;
+
+  .u-box {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
 
   .u-border {
     position: absolute;

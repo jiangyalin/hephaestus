@@ -2,7 +2,7 @@ import Axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 import ajax from './ajax'
 import type { ResPage } from './interface'
-import { Method } from './interface'
+import { Method } from './interface/enum'
 import mockData from './mock-data/index'
 
 const mock = new MockAdapter(Axios, { delayResponse: 1000 })
@@ -49,17 +49,17 @@ export const getTalentList = (data: ResPage): any => {
 //   )
 // }
 
-const getFileData = (data: { path: { id: number } }): any => {
-  return ajax(
-    {
-      url: '/file-data/' + data.path.id,
-      method: Method.GET
-    },
-    data
-  )
-}
+// const getFileData = (data: { path: { id: number } }): any => {
+//   return ajax(
+//     {
+//       url: '/file-data/' + data.path.id,
+//       method: Method.GET
+//     },
+//     data
+//   )
+// }
 
 export default {
   // getFileTreeAll,
-  getFileData
+  // getFileData
 }

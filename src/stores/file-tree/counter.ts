@@ -13,7 +13,7 @@ export const useCounterStore = defineStore('file-tree', {
       atom[SELECT_RESOURCE](this, { id: resourceId })
     },
     expandElement (id: number) { // 展开元素
-      if (this.resourceMap[id].type === resourceType.FILE) bus.emit('open-file', id)
+      if (this.resourceMap[id].type === resourceType.FILE) bus.emit('open-file', this.resourceMap[id].path)
       if (this.resourceMap[id].type === resourceType.FOLDER) atom[EXPAND_FOLDER](this, id)
     },
     initFileTree (data: Array<resourceNode>) { // 初始化文件树

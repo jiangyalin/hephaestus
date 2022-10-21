@@ -26,6 +26,7 @@
     </div>
     <div class="m-bt m-box">
       <layout
+        v-if="timeoutLoad"
         :name="locationType.BT"
         :tag="layoutState.btBlock.tag"
         :width="layoutState.btBlock.width"
@@ -39,13 +40,13 @@
 import { onMounted, ref } from 'vue'
 import layout from '../components/module/layout.vue'
 import { locationType } from '../stores/interface/enum'
-import { io } from 'socket.io-client'
-import config from '../config'
-
+// import { io } from 'socket.io-client'
+// import config from '../config'
 import { useCounterStore } from '../stores/layout/counter'
 
 const layoutState = useCounterStore()
 
+// 初始化窗口信息
 const windowInitFinish = ref(false) // 窗口初始化完成
 const init = () => {
   layoutState.initLayout({
@@ -53,7 +54,6 @@ const init = () => {
     height: (document.querySelector('body') || {}).offsetHeight || 0
   })
 }
-
 onMounted(() => {
   init()
   windowInitFinish.value = true
@@ -62,27 +62,34 @@ onMounted(() => {
   }
 })
 
+const timeoutLoad = ref(false)
+setTimeout(() => {
+  timeoutLoad.value = true
+}, 500)
+
+// 拖拽改变容器大小
 const mousemove = (e: any) => {
   layoutState.dragBorder({ x: e.pageX, y: e.pageY })
 }
-
 const mouseup = () => {
   layoutState.mack({ block: '', direction: '' })
 }
 
-const webSocket = () => {
-  const socket = io(config.serverWs)
+document.body.style.overscrollBehaviorX = 'none'
 
-  socket.on('connect', () => {
-    console.log(socket.connected) // true
-  })
+// const webSocket = () => {
+//   const socket = io(config.serverWs)
+//
+//   socket.on('connect', () => {
+//     console.log(socket.connected) // true
+//   })
+//
+//   socket.on('disconnect', () => {
+//     console.log(socket.connected) // false
+//   })
+// }
 
-  socket.on('disconnect', () => {
-    console.log(socket.connected) // false
-  })
-}
-
-webSocket()
+// webSocket()
 </script>
 
 <style lang="scss" scoped>

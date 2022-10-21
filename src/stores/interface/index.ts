@@ -6,6 +6,7 @@ export interface resourceNode {
   type: resourceType, // 资源类型
   fileType?: fileType, // 文件类型
   isExpand?: boolean, // 是否为展开状态
+  path?: string, // 文件路径
   node: Array<resourceNode>
 }
 
