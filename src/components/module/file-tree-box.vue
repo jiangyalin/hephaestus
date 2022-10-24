@@ -6,7 +6,7 @@
 import DvFileTreeNode from './../../widgets/dv-file-tree-node/index.vue'
 import { useCounterStore } from '../../stores/file-tree/counter'
 import api from './../../api'
-import { ResultData } from '../../api/interface'
+import type { ResultData } from '../../api/interface'
 const state = useCounterStore()
 
 api.fileTree.getFileTreeAll().then((res: ResultData) => {

@@ -33,5 +33,5 @@ export enum directionType {
   TP = 'tp',
   BT = 'bt',
   FL = 'fl',
-  Fr = 'fr'
+  FR = 'fr'
 }

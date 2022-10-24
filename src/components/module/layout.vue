@@ -10,25 +10,25 @@
       ref="jTp"
       class="u-border s-tp"
       :data-movable="borderStatus.tp"
-      @mousedown="mousedown(name, 'tp')"
+      @mousedown="mousedown(name, directionType.TP)"
     ></div>
     <div
       ref="jFr"
       class="u-border s-fr"
       :data-movable="borderStatus.fr"
-      @mousedown="mousedown(name, 'fr')"
+      @mousedown="mousedown(name, directionType.FR)"
     ></div>
     <div
       ref="jFl"
       class="u-border s-fl"
       :data-movable="borderStatus.fl"
-      @mousedown="mousedown(name, 'fl')"
+      @mousedown="mousedown(name, directionType.FL)"
     ></div>
     <div
       ref="jBt"
       class="u-border s-bt"
       :data-movable="borderStatus.bt"
-      @mousedown="mousedown(name, 'bt')"
+      @mousedown="mousedown(name, directionType.BT)"
     ></div>
   </div>
 </template>
@@ -39,7 +39,7 @@ import { directionType, locationType, tag } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
 import EditorBox from './editor-box.vue'
 import TerminalBox from './terminal-box.vue'
-import tool from './../../tool/index.ts'
+import tool from './../../tool/index'
 import { useCounterStore } from '../../stores/layout/counter'
 const layoutState = useCounterStore()
 
@@ -81,10 +81,10 @@ const jBt = ref(null)
 const jFl = ref(null)
 const jFr = ref(null)
 onMounted(() => {
-  borderStatus.value.tp = tool.getElementTop(jTp.value) !== 0
-  borderStatus.value.bt = tool.getElementTop(jBt.value) !== 0 && tool.getElementTop(jBt.value) !== (layoutState.window.height - 1)
-  borderStatus.value.fl = tool.getElementLeft(jFl.value) !== 0
-  borderStatus.value.fr = tool.getElementLeft(jFr.value) !== 0 && tool.getElementLeft(jFr.value) !== (layoutState.window.width - 1)
+  borderStatus.value.tp = tool.getElementTop(jTp.value!) !== 0
+  borderStatus.value.bt = tool.getElementTop(jBt.value!) !== 0 && tool.getElementTop(jBt.value!) !== (layoutState.window.height - 1)
+  borderStatus.value.fl = tool.getElementLeft(jFl.value!) !== 0
+  borderStatus.value.fr = tool.getElementLeft(jFr.value!) !== 0 && tool.getElementLeft(jFr.value!) !== (layoutState.window.width - 1)
 })
 
 // 边框拖拽特异处理(待优化)

@@ -21,7 +21,7 @@ const init = async () => {
   const socket = new WebSocket(config.socket + pid)
   const attachAddon = new AttachAddon(socket)
   term.loadAddon(attachAddon)
-  term.open(document.getElementById('terminal'))
+  term.open(document.getElementById('terminal') as HTMLElement)
   term.focus()
   console.log('pid', pid)
 }

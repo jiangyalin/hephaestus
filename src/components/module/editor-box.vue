@@ -20,7 +20,7 @@ import { VAceEditor } from 'vue3-ace-editor'
 import './ace-config'
 import api from './../../api'
 import bus from '../../tool/bus'
-import { ResultData } from '../../api/interface'
+import type { ResultData } from '../../api/interface'
 
 const content = reactive({
   code: ''
@@ -41,13 +41,11 @@ const editorInit = () => {
 
 const style = { height: '850px' }
 
-bus.on('open-file', (path: string) => {
-  api.fileTree.getFileInfo({
-    path
-  }).then(async (res: ResultData) => {
-    // content.code = (await import(res.data.asset + '?raw')).default
-    content.code = res.data.fileData
-  })
+bus.on('open-file', async (path: string) => {
+  // console.log('path', path)
+  const res: ResultData = await api.fileTree.getFileInfo({ path })
+  // content.code = (await import(res.data.asset + '?raw')).default
+  content.code = res.data.fileData
 })
 </script>
 

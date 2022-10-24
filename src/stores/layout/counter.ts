@@ -49,7 +49,7 @@ export const useCounterStore = defineStore('layout', {
       }
 
       // 横向拖动
-      if ((this.dragMack.block === locationType.TL && this.dragMack.direction === directionType.Fr) || (this.dragMack.block === locationType.TR && this.dragMack.direction === directionType.FL)) {
+      if ((this.dragMack.block === locationType.TL && this.dragMack.direction === directionType.FR) || (this.dragMack.block === locationType.TR && this.dragMack.direction === directionType.FL)) {
         atom[SET_LAYOUT](this, {
           location: locationType.TL,
           width: x
@@ -61,7 +61,7 @@ export const useCounterStore = defineStore('layout', {
       }
     },
     // 标记操作对象
-    mack ({ block, direction }: { block: locationType, direction: directionType }) {
+    mack ({ block, direction }: { block: locationType | '', direction: directionType | '' }) {
       atom[MACK_LAYOUT_OBJ](this, { block, direction })
     }
   },

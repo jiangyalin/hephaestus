@@ -27,7 +27,7 @@ export default {
     }
   },
   // 标记操作对象
-  [MACK_LAYOUT_OBJ] (state: layout, { block, direction }: { block: locationType, direction: directionType }) {
+  [MACK_LAYOUT_OBJ] (state: layout, { block, direction }: { block: locationType | '', direction: directionType | '' }) {
     state.dragMack.block = block
     state.dragMack.direction = direction
   }
