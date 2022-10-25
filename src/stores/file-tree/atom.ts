@@ -1,14 +1,15 @@
 import { EXPAND_FOLDER, INIT_FILE, SELECT_RESOURCE } from '../atom-type'
 import type { fileTree, resourceNode } from '../interface'
 import { resourceType } from '../interface/enum'
+import type { Ref } from 'vue'
 
 export default {
   // 选中资源
-  [SELECT_RESOURCE] (state: fileTree, { id }: { id: number }) {
-    state.checked = id
+  [SELECT_RESOURCE] (checked: Ref<number>, { id }: { id: number }) {
+    checked.value = id
   },
   // 展开文件夹
-  [EXPAND_FOLDER] (state: fileTree, id: number) {
+  [EXPAND_FOLDER] (resourceTree: Ref<Array<resourceNode>>, id: number) {
     const mapTree = (tree: any) => {
       return tree.map((item: any) => {
         return {
@@ -19,10 +20,10 @@ export default {
       })
     }
 
-    state.resourceTree = mapTree(state.resourceTree)
+    resourceTree.value = mapTree(resourceTree.value)
   },
   // 初始化文件树
-  [INIT_FILE] (state: fileTree, data: Array<resourceNode>) {
+  [INIT_FILE] (resourceTree: Ref<Array<resourceNode>>, data: Array<resourceNode>) {
     const map = {
       [resourceType.FOLDER]: 100000,
       [resourceType.FILE]: 0
@@ -38,6 +39,6 @@ export default {
           }
         })
     }
-    state.resourceTree = mapTree(data)
+    resourceTree.value = mapTree(data)
   }
 }
