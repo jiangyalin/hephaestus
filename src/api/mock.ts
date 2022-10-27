@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import MockAdapter from 'axios-mock-adapter'
 import ajax from './ajax'
-import type { ResPage } from './interface'
+import type { ResPage } from './interface/type'
 import { Method } from './interface/enum'
 import mockData from './mock-data/index'
 

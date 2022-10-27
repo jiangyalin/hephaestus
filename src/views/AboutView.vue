@@ -31,8 +31,8 @@
 <script setup lang="ts">
 import { getTalentList } from '../api/mock'
 import { ref, onMounted } from 'vue'
-import type { ResultData } from '../api/interface'
-import { Page } from '../api/interface'
+import type { ResultData } from '../api/interface/type'
+import { Page } from '../api/interface/type'
 import config from '../config'
 
 const tableData = ref([])

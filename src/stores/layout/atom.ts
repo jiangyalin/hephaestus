@@ -1,5 +1,5 @@
 import { INIT_WINDOW, MACK_LAYOUT_OBJ, SET_LAYOUT } from '../atom-type'
-import type { layout } from '../interface'
+import type { layout } from '../interface/type'
 import { directionType, locationType, tag } from '../interface/enum'
 
 export default {

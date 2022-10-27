@@ -1,4 +1,4 @@
-import type { fileTree } from '../interface'
+import type { fileTree } from '../interface/type'
 
 export default ():fileTree => ({
   checked: 0, // 选中文件

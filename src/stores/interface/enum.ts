@@ -35,3 +35,13 @@ export enum directionType {
   FL = 'fl',
   FR = 'fr'
 }
+
+// 新增文件标记
+export enum NewFileCode {
+  PROJECT = 'PROJECT',
+  FILE = 'FILE',
+  HTML_FILE = 'HTML_FILE',
+  STYLESHEET = 'STYLESHEET',
+  JAVASCRIPT_FILE = 'JAVASCRIPT_FILE',
+  TYPESCRIPT_FILE = 'TYPESCRIPT_FILE'
+}

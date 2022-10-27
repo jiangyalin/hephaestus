@@ -1,6 +1,9 @@
 <template>
   <div class="g-box g-terminal-box">
-    <div id="terminal"></div>
+    <div
+      id="terminal"
+      class="terminal"
+    ></div>
   </div>
 </template>
 
@@ -10,7 +13,7 @@ import { Terminal } from 'xterm'
 import { AttachAddon } from 'xterm-addon-attach'
 import api from '../../api'
 import config from '../../config'
-// import { WebLinksAddon } from 'xterm-addon-web-links'
+import 'xterm/css/xterm.css'
 
 const term = new Terminal()
 
@@ -33,7 +36,12 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .g-terminal-box {
+  height: 100%;
   color: #fff;
+
+  .terminal {
+    height: 100%;
+  }
 }
 </style>
 

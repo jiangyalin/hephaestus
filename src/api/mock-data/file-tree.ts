@@ -17,7 +17,7 @@ export default [{
       node: []
     }, {
       id: 4,
-      name: 'index.ts',
+      name: 'type.ts',
       type: 'file',
       // isExpand: false,
       node: []

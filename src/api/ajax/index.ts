@@ -3,7 +3,7 @@ import Axios from 'axios'
 import { ElMessage } from 'element-plus'
 import config from './../../config'
 import errCode from './errCode'
-import type { RequestFunc } from '../interface'
+import type { RequestFunc } from '../interface/type'
 import { Method } from '../interface/enum'
 
 const ajax: RequestFunc = (

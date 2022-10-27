@@ -4,10 +4,10 @@
 
 <script setup lang="ts" name="file-tree-box">
 import DvFileTreeNode from './../../widgets/dv-file-tree-node/index.vue'
-import { useCounterStore } from '../../stores/file-tree/counter'
+import { useFileTreeStore } from '../../stores/file-tree/counter'
 import api from './../../api'
-import type { ResultData } from '../../api/interface'
-const state = useCounterStore()
+import type { ResultData } from '../../api/interface/type'
+const state = useFileTreeStore()
 
 api.fileTree.getFileTreeAll().then((res: ResultData) => {
   state.initFileTree(res.data)

@@ -1,7 +1,11 @@
 import mock from './mock'
 import fileTree from './file-tree'
+import menu from './menu'
 
-export default {
+const api = {
   mock,
-  fileTree
+  fileTree,
+  menu
 }
+
+export default api

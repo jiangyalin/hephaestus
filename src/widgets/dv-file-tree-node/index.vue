@@ -38,9 +38,9 @@ import { computed } from 'vue'
 import DvFolder from './../../widgets/dv-folder/index.vue'
 import DvFile from './../../widgets/dv-file/index.vue'
 import { resourceType } from '../../stores/interface/enum'
-import type { resourceNode } from '../../stores/interface'
-import { useCounterStore } from '../../stores/file-tree/counter'
-const store = useCounterStore()
+import type { resourceNode } from '../../stores/interface/type'
+import { useFileTreeStore } from '../../stores/file-tree/counter'
+const store = useFileTreeStore()
 
 interface Props {
   tree: resourceNode[],
@@ -67,10 +67,11 @@ const rowStyle = computed(() => ({
 </script>
 
 <style lang="scss" scoped>
+@import "../../style/global-variable";
 .m-list {
   //padding-left: 18px;
   font-size: 14px;
-  color: #bababa;
+  color: $fc-primary;
   line-height: 1.2;
   cursor: default;
   user-select: none;

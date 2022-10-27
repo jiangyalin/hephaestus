@@ -1,5 +1,5 @@
 import { tag } from '../interface/enum'
-import type { layout } from '../interface'
+import type { layout } from '../interface/type'
 
 export default (): layout => ({
   tlBlock: {

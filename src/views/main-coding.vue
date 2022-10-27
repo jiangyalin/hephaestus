@@ -6,6 +6,7 @@
     @mousemove="mousemove"
     @mouseup="mouseup"
   >
+    <menu-box></menu-box>
     <div class="u-tp">
       <div class="m-tl m-box">
         <layout
@@ -39,6 +40,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import layout from '../components/module/layout.vue'
+import menuBox from '../components/module/menu-box/menu-box.vue'
 import { locationType } from '../stores/interface/enum'
 // import { io } from 'socket.io-client'
 // import config from '../config'
@@ -65,7 +67,7 @@ onMounted(() => {
 const timeoutLoad = ref(false)
 setTimeout(() => {
   timeoutLoad.value = true
-}, 500)
+}, 800)
 
 // 拖拽改变容器大小
 const mousemove = (e: any) => {

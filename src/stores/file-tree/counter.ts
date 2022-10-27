@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import atom from './atom'
 import { EXPAND_FOLDER, INIT_FILE, SELECT_RESOURCE } from '../atom-type'
-import type { resourceNode } from '../interface'
+import type { resourceNode } from '../interface/type'
 import bus from '../../tool/bus'
 import { resourceType } from '../interface/enum'
 
@@ -10,9 +10,10 @@ import { resourceType } from '../interface/enum'
 * pinia组合式api测试，暂时无法拆开文件模块
 * */
 
-export const useCounterStore = defineStore('file-tree', () => {
+export const useFileTreeStore = defineStore('file-tree', () => {
   const checked = ref<number>(0)
   const resourceTree = ref<Array<resourceNode>>([])
+
   const resourceMap = computed(() => {
     const map: {
       [index: number]: resourceNode
@@ -30,6 +31,10 @@ export const useCounterStore = defineStore('file-tree', () => {
 
     return map
   })
+  const checkedResourceNode = computed(() => {
+    return resourceMap.value[checked.value]
+  })
+
   return {
     checked,
     resourceTree,
@@ -43,7 +48,8 @@ export const useCounterStore = defineStore('file-tree', () => {
     initFileTree (data: Array<resourceNode>) { // 初始化文件树
       atom[INIT_FILE](resourceTree, data)
     },
-    resourceMap
+    resourceMap,
+    checkedResourceNode
   }
 })
 

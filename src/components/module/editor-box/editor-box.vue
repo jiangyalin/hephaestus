@@ -18,9 +18,9 @@
 import { reactive, watchEffect } from 'vue'
 import { VAceEditor } from 'vue3-ace-editor'
 import './ace-config'
-import api from './../../api'
-import bus from '../../tool/bus'
-import type { ResultData } from '../../api/interface'
+import api from '../../../api'
+import bus from '../../../tool/bus'
+import type { ResultData } from '../../../api/interface/type'
 
 const content = reactive({
   code: ''

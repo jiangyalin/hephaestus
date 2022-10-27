@@ -1,4 +1,4 @@
-import type { resourceType, fileType, tag, locationType, directionType } from './enum'
+import type { resourceType, fileType, tag, locationType, directionType, NewFileCode } from './enum'
 
 export interface resourceNode {
   id: number,
@@ -37,4 +37,13 @@ export interface layout {
     block: locationType | '',
     direction: directionType | ''
   }
+}
+
+// 菜单树
+export interface MenuNode {
+  title: string,
+  value: number | string,
+  code?: NewFileCode,
+  icon?: string,
+  menuNode?: Array<MenuNode>
 }

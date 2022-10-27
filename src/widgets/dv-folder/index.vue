@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import { useCounterStore } from '../../stores/file-tree/counter'
-const store = useCounterStore()
+import { useFileTreeStore } from '../../stores/file-tree/counter'
+const store = useFileTreeStore()
 
 interface Props {
   id: number,

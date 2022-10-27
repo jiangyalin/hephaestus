@@ -37,7 +37,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { directionType, locationType, tag } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
-import EditorBox from './editor-box.vue'
+import EditorBox from './editor-box/editor-box.vue'
 import TerminalBox from './terminal-box.vue'
 import tool from './../../tool/index'
 import { useCounterStore } from '../../stores/layout/counter'
@@ -94,6 +94,7 @@ const mousedown = (name: locationType, direction: directionType) => {
 </script>
 
 <style lang="scss" scoped>
+@import "../../style/global-variable";
 .g-layout-box {
   overflow: auto;
   position: relative;
@@ -108,7 +109,7 @@ const mousedown = (name: locationType, direction: directionType) => {
 
   .u-border {
     position: absolute;
-    background-color: #bababa;
+    background-color: $box-bc;
     pointer-events: none;
 
     &.s-tp, &.s-bt {

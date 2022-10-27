@@ -1,5 +1,5 @@
 import { EXPAND_FOLDER, INIT_FILE, SELECT_RESOURCE } from '../atom-type'
-import type { fileTree, resourceNode } from '../interface'
+import type { fileTree, resourceNode } from '../interface/type'
 import { resourceType } from '../interface/enum'
 import type { Ref } from 'vue'
 

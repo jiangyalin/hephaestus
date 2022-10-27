@@ -1,14 +1,14 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
-import { useCounterStore } from '../../stores/file-tree/counter'
-import type { resourceNode } from '../../stores/interface'
+import { useFileTreeStore } from '../../stores/file-tree/counter'
+import type { resourceNode } from '../../stores/interface/type'
 
 describe('file-tree', () => {
   beforeEach(() => {
     setActivePinia(createPinia())
   })
   it('展开文件夹', () => {
-    const counter = useCounterStore()
+    const counter = useFileTreeStore()
     counter.expandElement(2)
     const treeMap: {
       [index: number]: resourceNode
