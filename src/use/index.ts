@@ -2,7 +2,7 @@
 // import createHash from '../tool/create-hash'
 
 export const vUseDoubleClick = {
-  mounted: (el: HTMLFormElement, binding: any) => {
+  mounted: (el: HTMLFormElement) => {
     console.log('el')
     window.setTimeout(() => {
       console.dir(el)
