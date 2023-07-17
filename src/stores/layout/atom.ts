@@ -1,6 +1,6 @@
 import { INIT_WINDOW, MACK_LAYOUT_OBJ, SET_LAYOUT } from '../atom-type'
 import type { layout } from '../interface/type'
-import { directionType, locationType, tag } from '../interface/enum'
+import { directionType, locationType, tagName } from '../interface/enum'
 
 export default {
   // 初始化窗口数据
@@ -9,7 +9,7 @@ export default {
     state.window.height = height
   },
   // 设置布局
-  [SET_LAYOUT] (state: layout, { location, tag, width, height }: { location: locationType, tag?: tag, width?: number, height?: number }) {
+  [SET_LAYOUT] (state: layout, { location, tag, width, height }: { location: locationType, tag?: tagName, width?: number, height?: number }) {
     if (location === locationType.TL) {
       state.tlBlock.tag = tag || state.tlBlock.tag
       state.tlBlock.width = width || state.tlBlock.width

@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { directionType, locationType, tag } from '../../stores/interface/enum'
+import { directionType, locationType, tagName } from '../../stores/interface/enum'
 import FileTreeBox from './file-tree-box.vue'
 import EditorBox from './editor-box/editor-box.vue'
 import TerminalBox from './terminal-box.vue'
@@ -45,14 +45,14 @@ const layoutState = useCounterStore()
 
 interface Props {
   name: locationType,
-  tag: tag,
+  tag: tagName,
   width: number,
   height: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
   name: locationType.TL,
-  tag: tag.DIV,
+  tag: tagName.DIV,
   width: 100,
   height: 100
 })

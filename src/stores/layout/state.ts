@@ -1,19 +1,19 @@
-import { tag } from '../interface/enum'
+import { tagName } from '../interface/enum'
 import type { layout } from '../interface/type'
 
 export default (): layout => ({
   tlBlock: {
-    tag: tag.FILE_TREE,
+    tag: tagName.FILE_TREE,
     width: 100,
     height: 100
   },
   trBlock: {
-    tag: tag.EDITOR,
+    tag: tagName.EDITOR,
     width: 100,
     height: 100
   },
   btBlock: {
-    tag: tag.TERMINAL,
+    tag: tagName.TERMINAL,
     width: 100,
     height: 100
   },

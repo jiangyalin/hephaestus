@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import state from './state'
 import atom from './atom'
 import { INIT_WINDOW, MACK_LAYOUT_OBJ, SET_LAYOUT } from '../atom-type'
-import { directionType, locationType, tag } from '../interface/enum'
+import { directionType, locationType, tagName } from '../interface/enum'
 
 export const useCounterStore = defineStore('layout', {
   state,
@@ -26,7 +26,7 @@ export const useCounterStore = defineStore('layout', {
         height: Math.round(this.window.height * 0.2)
       })
     },
-    setLayout ({ location, tag, width, height }: { location: locationType, tag?: tag, width?: number, height?: number }) {
+    setLayout ({ location, tag, width, height }: { location: locationType, tag?: tagName, width?: number, height?: number }) {
       atom[SET_LAYOUT](this, { location, tag, width, height })
     },
     // 拖拽边框，改变大小
