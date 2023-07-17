@@ -1,0 +1,887 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": ".eslintignore",
+      "node": [],
+      "path": ".eslintignore",
+      "type": "file"
+    },
+    {
+      "id": 2,
+      "name": ".eslintrc.cjs",
+      "node": [],
+      "path": ".eslintrc.cjs",
+      "type": "file"
+    },
+    {
+      "id": 3,
+      "name": ".gitignore",
+      "node": [],
+      "path": ".gitignore",
+      "type": "file"
+    },
+    {
+      "id": 4,
+      "name": ".prettierrc.json",
+      "node": [],
+      "path": ".prettierrc.json",
+      "type": "file"
+    },
+    {
+      "id": 5,
+      "name": ".vitest-result.json",
+      "node": [],
+      "path": ".vitest-result.json",
+      "type": "file"
+    },
+    {
+      "id": 6,
+      "name": "README.md",
+      "node": [],
+      "path": "README.md",
+      "type": "file"
+    },
+    {
+      "id": 7,
+      "name": "cypress",
+      "node": [
+        {
+          "id": 8,
+          "name": "e2e",
+          "node": [
+            {
+              "id": 9,
+              "name": "example.cy.ts",
+              "node": [],
+              "path": "cypress/e2e/example.cy.ts",
+              "type": "file"
+            },
+            {
+              "id": 10,
+              "name": "tsconfig.json",
+              "node": [],
+              "path": "cypress/e2e/tsconfig.json",
+              "type": "file"
+            }
+          ],
+          "path": "cypress/e2e/example.cy.ts",
+          "type": "folder"
+        },
+        {
+          "id": 11,
+          "name": "fixtures",
+          "node": [
+            {
+              "id": 12,
+              "name": "example.json",
+              "node": [],
+              "path": "cypress/fixtures/example.json",
+              "type": "file"
+            }
+          ],
+          "path": "cypress/fixtures/example.json",
+          "type": "folder"
+        },
+        {
+          "id": 13,
+          "name": "support",
+          "node": [
+            {
+              "id": 14,
+              "name": "commands.ts",
+              "node": [],
+              "path": "cypress/support/commands.ts",
+              "type": "file"
+            },
+            {
+              "id": 15,
+              "name": "e2e.ts",
+              "node": [],
+              "path": "cypress/support/e2e.ts",
+              "type": "file"
+            }
+          ],
+          "path": "cypress/support/commands.ts",
+          "type": "folder"
+        }
+      ],
+      "path": "cypress/e2e/example.cy.ts",
+      "type": "folder"
+    },
+    {
+      "id": 16,
+      "name": "cypress.config.ts",
+      "node": [],
+      "path": "cypress.config.ts",
+      "type": "file"
+    },
+    {
+      "id": 17,
+      "name": "env.d.ts",
+      "node": [],
+      "path": "env.d.ts",
+      "type": "file"
+    },
+    {
+      "id": 18,
+      "name": "index.html",
+      "node": [],
+      "path": "index.html",
+      "type": "file"
+    },
+    {
+      "id": 19,
+      "name": "package.json",
+      "node": [],
+      "path": "package.json",
+      "type": "file"
+    },
+    {
+      "id": 20,
+      "name": "public",
+      "node": [
+        {
+          "id": 21,
+          "name": "favicon.ico",
+          "node": [],
+          "path": "public/favicon.ico",
+          "type": "file"
+        }
+      ],
+      "path": "public/favicon.ico",
+      "type": "folder"
+    },
+    {
+      "id": 22,
+      "name": "src",
+      "node": [
+        {
+          "id": 23,
+          "name": "App.vue",
+          "node": [],
+          "path": "src/App.vue",
+          "type": "file"
+        },
+        {
+          "id": 24,
+          "name": "api",
+          "node": [
+            {
+              "id": 25,
+              "name": "ajax",
+              "node": [
+                {
+                  "id": 26,
+                  "name": "errCode.ts",
+                  "node": [],
+                  "path": "src/api/ajax/errCode.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 27,
+                  "name": "index.ts",
+                  "node": [],
+                  "path": "src/api/ajax/index.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/api/ajax/errCode.ts",
+              "type": "folder"
+            },
+            {
+              "id": 28,
+              "name": "file-tree.ts",
+              "node": [],
+              "path": "src/api/file-tree.ts",
+              "type": "file"
+            },
+            {
+              "id": 29,
+              "name": "index.ts",
+              "node": [],
+              "path": "src/api/index.ts",
+              "type": "file"
+            },
+            {
+              "id": 30,
+              "name": "interface",
+              "node": [
+                {
+                  "id": 31,
+                  "name": "enum.ts",
+                  "node": [],
+                  "path": "src/api/interface/enum.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 32,
+                  "name": "type.ts",
+                  "node": [],
+                  "path": "src/api/interface/type.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/api/interface/enum.ts",
+              "type": "folder"
+            },
+            {
+              "id": 33,
+              "name": "menu.ts",
+              "node": [],
+              "path": "src/api/menu.ts",
+              "type": "file"
+            },
+            {
+              "id": 34,
+              "name": "mock-data",
+              "node": [
+                {
+                  "id": 35,
+                  "name": "file-data.ts",
+                  "node": [],
+                  "path": "src/api/mock-data/file-data.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 36,
+                  "name": "file-tree.ts",
+                  "node": [],
+                  "path": "src/api/mock-data/file-tree.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 37,
+                  "name": "index.ts",
+                  "node": [],
+                  "path": "src/api/mock-data/index.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/api/mock-data/file-data.ts",
+              "type": "folder"
+            },
+            {
+              "id": 38,
+              "name": "mock.ts",
+              "node": [],
+              "path": "src/api/mock.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/api/ajax/errCode.ts",
+          "type": "folder"
+        },
+        {
+          "id": 39,
+          "name": "assets",
+          "node": [
+            {
+              "id": 40,
+              "name": "base.css",
+              "node": [],
+              "path": "src/assets/base.css",
+              "type": "file"
+            },
+            {
+              "id": 41,
+              "name": "logo.svg",
+              "node": [],
+              "path": "src/assets/logo.svg",
+              "type": "file"
+            },
+            {
+              "id": 42,
+              "name": "main.css",
+              "node": [],
+              "path": "src/assets/main.css",
+              "type": "file"
+            }
+          ],
+          "path": "src/assets/base.css",
+          "type": "folder"
+        },
+        {
+          "id": 43,
+          "name": "components",
+          "node": [
+            {
+              "id": 44,
+              "name": "HelloWorld.vue",
+              "node": [],
+              "path": "src/components/HelloWorld.vue",
+              "type": "file"
+            },
+            {
+              "id": 45,
+              "name": "TheWelcome.vue",
+              "node": [],
+              "path": "src/components/TheWelcome.vue",
+              "type": "file"
+            },
+            {
+              "id": 46,
+              "name": "WelcomeItem.vue",
+              "node": [],
+              "path": "src/components/WelcomeItem.vue",
+              "type": "file"
+            },
+            {
+              "id": 47,
+              "name": "__tests__",
+              "node": [
+                {
+                  "id": 48,
+                  "name": "HelloWorld.spec.ts",
+                  "node": [],
+                  "path": "src/components/__tests__/HelloWorld.spec.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/components/__tests__/HelloWorld.spec.ts",
+              "type": "folder"
+            },
+            {
+              "id": 49,
+              "name": "icons",
+              "node": [
+                {
+                  "id": 50,
+                  "name": "IconCommunity.vue",
+                  "node": [],
+                  "path": "src/components/icons/IconCommunity.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 51,
+                  "name": "IconDocumentation.vue",
+                  "node": [],
+                  "path": "src/components/icons/IconDocumentation.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 52,
+                  "name": "IconEcosystem.vue",
+                  "node": [],
+                  "path": "src/components/icons/IconEcosystem.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 53,
+                  "name": "IconSupport.vue",
+                  "node": [],
+                  "path": "src/components/icons/IconSupport.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 54,
+                  "name": "IconTooling.vue",
+                  "node": [],
+                  "path": "src/components/icons/IconTooling.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/components/icons/IconCommunity.vue",
+              "type": "folder"
+            },
+            {
+              "id": 55,
+              "name": "module",
+              "node": [
+                {
+                  "id": 56,
+                  "name": "editor-box",
+                  "node": [
+                    {
+                      "id": 57,
+                      "name": "ace-config.ts",
+                      "node": [],
+                      "path": "src/components/module/editor-box/ace-config.ts",
+                      "type": "file"
+                    },
+                    {
+                      "id": 58,
+                      "name": "editor-box.vue",
+                      "node": [],
+                      "path": "src/components/module/editor-box/editor-box.vue",
+                      "type": "file"
+                    }
+                  ],
+                  "path": "src/components/module/editor-box/ace-config.ts",
+                  "type": "folder"
+                },
+                {
+                  "id": 59,
+                  "name": "file-tree-box.vue",
+                  "node": [],
+                  "path": "src/components/module/file-tree-box.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 60,
+                  "name": "layout.vue",
+                  "node": [],
+                  "path": "src/components/module/layout.vue",
+                  "type": "file"
+                },
+                {
+                  "id": 61,
+                  "name": "menu-box",
+                  "node": [
+                    {
+                      "id": 62,
+                      "name": "menu-box.vue",
+                      "node": [],
+                      "path": "src/components/module/menu-box/menu-box.vue",
+                      "type": "file"
+                    },
+                    {
+                      "id": 63,
+                      "name": "menu.ts",
+                      "node": [],
+                      "path": "src/components/module/menu-box/menu.ts",
+                      "type": "file"
+                    }
+                  ],
+                  "path": "src/components/module/menu-box/menu-box.vue",
+                  "type": "folder"
+                },
+                {
+                  "id": 64,
+                  "name": "terminal-box.vue",
+                  "node": [],
+                  "path": "src/components/module/terminal-box.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/components/module/editor-box/ace-config.ts",
+              "type": "folder"
+            }
+          ],
+          "path": "src/components/HelloWorld.vue",
+          "type": "folder"
+        },
+        {
+          "id": 65,
+          "name": "config",
+          "node": [
+            {
+              "id": 66,
+              "name": "index.ts",
+              "node": [],
+              "path": "src/config/index.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/config/index.ts",
+          "type": "folder"
+        },
+        {
+          "id": 67,
+          "name": "main.ts",
+          "node": [],
+          "path": "src/main.ts",
+          "type": "file"
+        },
+        {
+          "id": 68,
+          "name": "router",
+          "node": [
+            {
+              "id": 69,
+              "name": "index.ts",
+              "node": [],
+              "path": "src/router/index.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/router/index.ts",
+          "type": "folder"
+        },
+        {
+          "id": 70,
+          "name": "stores",
+          "node": [
+            {
+              "id": 71,
+              "name": "atom-type.ts",
+              "node": [],
+              "path": "src/stores/atom-type.ts",
+              "type": "file"
+            },
+            {
+              "id": 72,
+              "name": "file-tree",
+              "node": [
+                {
+                  "id": 73,
+                  "name": "actions.ts",
+                  "node": [],
+                  "path": "src/stores/file-tree/actions.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 74,
+                  "name": "atom.ts",
+                  "node": [],
+                  "path": "src/stores/file-tree/atom.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 75,
+                  "name": "counter.ts",
+                  "node": [],
+                  "path": "src/stores/file-tree/counter.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 76,
+                  "name": "state.ts",
+                  "node": [],
+                  "path": "src/stores/file-tree/state.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/stores/file-tree/actions.ts",
+              "type": "folder"
+            },
+            {
+              "id": 77,
+              "name": "interface",
+              "node": [
+                {
+                  "id": 78,
+                  "name": "enum.ts",
+                  "node": [],
+                  "path": "src/stores/interface/enum.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 79,
+                  "name": "type.ts",
+                  "node": [],
+                  "path": "src/stores/interface/type.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/stores/interface/enum.ts",
+              "type": "folder"
+            },
+            {
+              "id": 80,
+              "name": "layout",
+              "node": [
+                {
+                  "id": 81,
+                  "name": "atom.ts",
+                  "node": [],
+                  "path": "src/stores/layout/atom.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 82,
+                  "name": "counter.ts",
+                  "node": [],
+                  "path": "src/stores/layout/counter.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 83,
+                  "name": "state.ts",
+                  "node": [],
+                  "path": "src/stores/layout/state.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/stores/layout/atom.ts",
+              "type": "folder"
+            },
+            {
+              "id": 84,
+              "name": "menu",
+              "node": [
+                {
+                  "id": 85,
+                  "name": "atom.ts",
+                  "node": [],
+                  "path": "src/stores/menu/atom.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 86,
+                  "name": "counter.ts",
+                  "node": [],
+                  "path": "src/stores/menu/counter.ts",
+                  "type": "file"
+                },
+                {
+                  "id": 87,
+                  "name": "state.ts",
+                  "node": [],
+                  "path": "src/stores/menu/state.ts",
+                  "type": "file"
+                }
+              ],
+              "path": "src/stores/menu/atom.ts",
+              "type": "folder"
+            }
+          ],
+          "path": "src/stores/atom-type.ts",
+          "type": "folder"
+        },
+        {
+          "id": 88,
+          "name": "style",
+          "node": [
+            {
+              "id": 89,
+              "name": "global-variable.scss",
+              "node": [],
+              "path": "src/style/global-variable.scss",
+              "type": "file"
+            },
+            {
+              "id": 90,
+              "name": "index.scss",
+              "node": [],
+              "path": "src/style/index.scss",
+              "type": "file"
+            },
+            {
+              "id": 91,
+              "name": "theme.scss",
+              "node": [],
+              "path": "src/style/theme.scss",
+              "type": "file"
+            }
+          ],
+          "path": "src/style/global-variable.scss",
+          "type": "folder"
+        },
+        {
+          "id": 92,
+          "name": "tool",
+          "node": [
+            {
+              "id": 93,
+              "name": "bus.ts",
+              "node": [],
+              "path": "src/tool/bus.ts",
+              "type": "file"
+            },
+            {
+              "id": 94,
+              "name": "create-hash.ts",
+              "node": [],
+              "path": "src/tool/create-hash.ts",
+              "type": "file"
+            },
+            {
+              "id": 95,
+              "name": "get-element-left.ts",
+              "node": [],
+              "path": "src/tool/get-element-left.ts",
+              "type": "file"
+            },
+            {
+              "id": 96,
+              "name": "get-element-top.ts",
+              "node": [],
+              "path": "src/tool/get-element-top.ts",
+              "type": "file"
+            },
+            {
+              "id": 97,
+              "name": "index.ts",
+              "node": [],
+              "path": "src/tool/index.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/tool/bus.ts",
+          "type": "folder"
+        },
+        {
+          "id": 98,
+          "name": "use",
+          "node": [
+            {
+              "id": 99,
+              "name": "index.ts",
+              "node": [],
+              "path": "src/use/index.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/use/index.ts",
+          "type": "folder"
+        },
+        {
+          "id": 100,
+          "name": "utils",
+          "node": [
+            {
+              "id": 101,
+              "name": "click-outside.ts",
+              "node": [],
+              "path": "src/utils/click-outside.ts",
+              "type": "file"
+            },
+            {
+              "id": 102,
+              "name": "global-event.ts",
+              "node": [],
+              "path": "src/utils/global-event.ts",
+              "type": "file"
+            }
+          ],
+          "path": "src/utils/click-outside.ts",
+          "type": "folder"
+        },
+        {
+          "id": 103,
+          "name": "views",
+          "node": [
+            {
+              "id": 104,
+              "name": "AboutView.vue",
+              "node": [],
+              "path": "src/views/AboutView.vue",
+              "type": "file"
+            },
+            {
+              "id": 105,
+              "name": "HomeView.vue",
+              "node": [],
+              "path": "src/views/HomeView.vue",
+              "type": "file"
+            },
+            {
+              "id": 106,
+              "name": "main-coding.vue",
+              "node": [],
+              "path": "src/views/main-coding.vue",
+              "type": "file"
+            }
+          ],
+          "path": "src/views/AboutView.vue",
+          "type": "folder"
+        },
+        {
+          "id": 107,
+          "name": "widgets",
+          "node": [
+            {
+              "id": 108,
+              "name": "dv-file",
+              "node": [
+                {
+                  "id": 109,
+                  "name": "index.vue",
+                  "node": [],
+                  "path": "src/widgets/dv-file/index.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/widgets/dv-file/index.vue",
+              "type": "folder"
+            },
+            {
+              "id": 110,
+              "name": "dv-file-tree-node",
+              "node": [
+                {
+                  "id": 111,
+                  "name": "index.vue",
+                  "node": [],
+                  "path": "src/widgets/dv-file-tree-node/index.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/widgets/dv-file-tree-node/index.vue",
+              "type": "folder"
+            },
+            {
+              "id": 112,
+              "name": "dv-folder",
+              "node": [
+                {
+                  "id": 113,
+                  "name": "index.vue",
+                  "node": [],
+                  "path": "src/widgets/dv-folder/index.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/widgets/dv-folder/index.vue",
+              "type": "folder"
+            },
+            {
+              "id": 114,
+              "name": "menu-panel",
+              "node": [
+                {
+                  "id": 115,
+                  "name": "index.vue",
+                  "node": [],
+                  "path": "src/widgets/menu-panel/index.vue",
+                  "type": "file"
+                }
+              ],
+              "path": "src/widgets/menu-panel/index.vue",
+              "type": "folder"
+            }
+          ],
+          "path": "src/widgets/dv-file/index.vue",
+          "type": "folder"
+        }
+      ],
+      "path": "src/App.vue",
+      "type": "folder"
+    },
+    {
+      "id": 116,
+      "name": "tsconfig.app.json",
+      "node": [],
+      "path": "tsconfig.app.json",
+      "type": "file"
+    },
+    {
+      "id": 117,
+      "name": "tsconfig.config.json",
+      "node": [],
+      "path": "tsconfig.config.json",
+      "type": "file"
+    },
+    {
+      "id": 118,
+      "name": "tsconfig.json",
+      "node": [],
+      "path": "tsconfig.json",
+      "type": "file"
+    },
+    {
+      "id": 119,
+      "name": "tsconfig.vitest.json",
+      "node": [],
+      "path": "tsconfig.vitest.json",
+      "type": "file"
+    },
+    {
+      "id": 120,
+      "name": "vite.config.ts",
+      "node": [],
+      "path": "vite.config.ts",
+      "type": "file"
+    },
+    {
+      "id": 121,
+      "name": "yarn.lock",
+      "node": [],
+      "path": "yarn.lock",
+      "type": "file"
+    }
+  ],
+  "message": "ok"
+}
