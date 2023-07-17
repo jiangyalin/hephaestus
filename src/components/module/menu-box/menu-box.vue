@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { vClickOutside } from '../../../utils/click-outside'
-import { globalClick } from '../../../utils/global-event'
+// import { globalClick } from '../../../utils/global-event'
 import menuPanel from '../../../widgets/menu-panel/index.vue'
 import { useCounterStore } from '../../../stores/menu/counter'
 

@@ -13,6 +13,7 @@ import { resourceType } from '../interface/enum'
 export const useFileTreeStore = defineStore('file-tree', () => {
   const checked = ref<number>(0)
   const resourceTree = ref<Array<resourceNode>>([])
+  // const resourceTree = reactive<Array<resourceNode>>([])
 
   const resourceMap = computed(() => {
     const map: {

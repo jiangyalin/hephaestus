@@ -1,5 +1,5 @@
-import { globalClick } from '../utils/global-event'
-import createHash from '../tool/create-hash'
+// import { globalClick } from '../utils/global-event'
+// import createHash from '../tool/create-hash'
 
 export const vUseDoubleClick = {
   mounted: (el: HTMLFormElement, binding: any) => {

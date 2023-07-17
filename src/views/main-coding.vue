@@ -70,7 +70,7 @@ setTimeout(() => {
 }, 800)
 
 // 拖拽改变容器大小
-const mousemove = (e: any) => {
+const mousemove = (e: MouseEvent) => {
   layoutState.dragBorder({ x: e.pageX, y: e.pageY })
 }
 const mouseup = () => {

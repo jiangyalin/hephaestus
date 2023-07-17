@@ -29,8 +29,10 @@ const init = async () => {
   console.log('pid', pid)
 }
 
-onMounted(async () => {
-  init()
+onMounted(() => {
+  setTimeout(() => {
+    init()
+  }, 5000)
 })
 </script>
 

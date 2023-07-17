@@ -1,4 +1,4 @@
-import type { resourceType, fileType, tag, locationType, directionType, NewFileCode } from './enum'
+import type { resourceType, fileType, tagName, locationType, directionType, NewFileCode } from './enum'
 
 export interface resourceNode {
   id: number,
@@ -17,7 +17,7 @@ export interface fileTree {
 }
 
 export interface layoutBlock {
-  tag: tag,
+  tag: tagName,
   width: number,
   height: number
 }
