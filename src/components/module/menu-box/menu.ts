@@ -9,7 +9,7 @@ export enum Code {
 
 export interface Menu {
   title: string,
-  value: number | string,
+  value: number,
   code?: Code,
   icon?: string,
   menuNode?: Array<Menu>

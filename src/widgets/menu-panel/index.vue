@@ -31,17 +31,17 @@
 </template>
 
 <script setup lang="ts">
-import { Menu } from '../../components/module/menu-box/menu'
+import type { Menu } from '../../components/module/menu-box/menu'
 import { useCounterStore } from '../../stores/menu/counter'
 
 const store = useCounterStore()
 
 interface Props {
-  menu: Menu
+  menu?: Array<Menu>
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  menu: []
+  menu: () => []
 })
 </script>
 

@@ -42,7 +42,7 @@ export interface layout {
 // 菜单树
 export interface MenuNode {
   title: string,
-  value: number | string,
+  value: number,
   code?: NewFileCode,
   icon?: string,
   menuNode?: Array<MenuNode>

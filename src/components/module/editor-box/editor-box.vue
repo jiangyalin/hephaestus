@@ -41,8 +41,8 @@ const editorInit = () => {
 
 const style = { height: '850px' }
 
-bus.on('open-file', async (path: string) => {
-  const res: ResultData = await api.fileTree.getFileInfo({ path })
+bus.on('open-file', async (path) => {
+  const res: ResultData = await api.fileTree.getFileInfo({ path: path as string })
   // content.code = (await import(res.data.asset + '?raw')).default
   content.code = res.data.fileData
 })
